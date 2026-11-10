@@ -1,0 +1,2 @@
+# boku
+bot + goku = boku
