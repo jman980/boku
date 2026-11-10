@@ -1,21 +1,11 @@
-const bedrock = require('bedrock-protocol');
-
-console.log("Starting Bedrock Friend Bot...");
-
-const client = bedrock.createClient({
-  host: process.env.ATERNOS_IP || "DragonBallzSMP.aternos.me",
-  port: parseInt(process.env.ATERNOS_PORT || "19132"),
-  profilesFolder: './tokens',
-  offline: false,
-  skipPing: true, // This stops the bot from getting blocked by Aternos' firewall
-  connectTimeout: 30000 // Gives the bot more time to fight through the lag
-});
-
-client.on('play_status', (packet) => {
-  console.log("Success! The bot is connected and broadcasting your server to your friends list!");
-});
-
-client.on('error', (err) => {
-  console.error("Bot encountered an error:", err);
-});
-
+{
+  "name": "Boku",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bedrock-protocol": "^3.26.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
